@@ -1,6 +1,7 @@
 const input = document.getElementById("input-todo")
 const container_todo = document.querySelector(".target-todos")
 const btn_addtodo = document.getElementById("buton-add-todo")
+const btn_deleteAll = document.getElementById("button-delete-all");
 const contadorElement = document.getElementById("contadorTareas");
 
 window.onload = () => {
@@ -53,6 +54,13 @@ const mostrarTareas = () =>{
     }
     
 }
+const agregarTarea = () => {
+    if (input.value == "" || input.value.trim() == "") {
+        window.alert("Input vacío, ingrese datos");
+    } else {
+        guardarTareas();
+    }
+};
 
 const eliminarTarea = (tarea) => {
     let tareas = JSON.parse(localStorage.getItem("tareas"));
@@ -70,10 +78,21 @@ const eliminarTarea = (tarea) => {
 
 
 btn_addtodo.addEventListener("click", () => {
-    if(input.value == "" || input.value.trim() == ""){
-        window.alert("Input vacio, ingrese datos")
+    agregarTarea();
+});
 
-    }else{
-        guardarTareas();
+const eliminarTodasLasTareas = () => {
+    localStorage.removeItem("tareas"); // Elimina todas las tareas del localStorage
+    container_todo.innerHTML = ""; // Limpia la lista en el HTML
+    actualizarContadorTareas();
+};
+
+input.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        agregarTarea();
     }
 });
+
+
+
+btn_deleteAll.addEventListener("click", eliminarTodasLasTareas);

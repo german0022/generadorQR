@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,47 +8,52 @@
     <title>Lista de Tareas</title>
 
     <link rel="stylesheet" href="styles.css">
-    
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,400&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
-    <div class="target-big">
-        
-        <header class="target-header">
-            <h1 class="titulo">Lista de Tareas</h1>
-            <p class="barraSeparadora">|</p>
-            <p id="contadorTareas" class="p">Pendientes: 0</p>
-            
-        </header>
 
 
-        <div class="div-input-and-button" >
-            <div class="div-input">
-                <input type="text" id="input-todo" class="input-todos" placeholder="Ingresa tu Tarea">
-            </div>
+    <header class="target-header">
+        <h1 class="titulo">Lista de Tareas</h1>
+        <p class="barraSeparadora">|</p>
+        <p id="contadorTareas" class="p">Pendientes: 0</p>
 
-            <div class="div-button">
-                <button id="buton-add-todo" class="button-todo">Crear Tarea</button>
-            </div>
-                
+    </header>
+
+
+    <div class="div-input-and-button">
+        <div class="div-input">
+            <input type="text" id="input-todo" class="input-todos" placeholder="Ingresa tu Tarea">
         </div>
 
-        
-        <div class="target-todos">
-            <ul class="todos">
-                <div>
-                    
-
-                </div>
-            </ul>
+        <div class="div-button">
+            <button id="buton-add-todo" class="button-todo">Crear Tarea</button>
         </div>
-        
+
     </div>
+
+
+    <div class="target-todos">
+        <ul class="todos">
+            <div>
+
+
+            </div>
+        </ul>
+    </div>
+
+    <div class="div-elimitar-todas">
+        <button id=button-delete-all class="button-delete">Eliminar Todas</button>
+    </div>
+
+
     <script src="main.js" defer></script>
 </body>
+
 </html>
