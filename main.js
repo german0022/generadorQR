@@ -1,13 +1,24 @@
 const input = document.getElementById("input-todo")
 const container_todo = document.querySelector(".target-todos")
 const btn_addtodo = document.getElementById("buton-add-todo")
+const contadorElement = document.getElementById("contadorTareas");
 
 window.onload = () => {
     mostrarTareas();
+    actualizarContadorTareas();
 };
 
+const actualizarContadorTareas = () => {
+    // Obtener las tareas almacenadas en el localStorage
+    const tareas = JSON.parse(localStorage.getItem("tareas")) || [];
 
+    // Calcular el número de tareas pendientes
+    const tareasPendientes = tareas.length;
 
+    // Actualizar el contenido del elemento en el HTML con el contador
+    const contadorElement = document.getElementById("contadorTareas");
+    contadorElement.textContent = `Pendientes: ${tareasPendientes}`;
+};
 
 const guardarTareas = () =>{
     const tarea = {
@@ -24,6 +35,7 @@ const guardarTareas = () =>{
     }
     mostrarTareas();
     input.value = "";
+    actualizarContadorTareas();
     
 };
 
@@ -39,6 +51,7 @@ const mostrarTareas = () =>{
         
         `;
     }
+    
 }
 
 const eliminarTarea = (tarea) => {
@@ -51,6 +64,7 @@ const eliminarTarea = (tarea) => {
     }
     localStorage.setItem("tareas",JSON.stringify(tareas));
     mostrarTareas();
+    actualizarContadorTareas();
 }
 
 

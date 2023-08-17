@@ -7,7 +7,7 @@
     <title>Lista de Tareas</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,20 +19,24 @@
     <div class="target-big">
         
         <header class="target-header">
-            <h1>Tareas</h1>
-
+            <h1 class="titulo">Lista de Tareas</h1>
+            <p class="barraSeparadora">|</p>
+            <p id="contadorTareas" class="p">Pendientes: 0</p>
             
-        
-            <div class="input-todos-div" >
-                <input type="text" id="input-todo" 
-                class="input-todos"
-                placeholder="Ingresa tu Tarea">
-                <div class="div-button">
-                    <button id="buton-add-todo" class="button-todo">Crear Tarea</button>
-                </div>
-                    
-            </div>
         </header>
+
+
+        <div class="div-input-and-button" >
+            <div class="div-input">
+                <input type="text" id="input-todo" class="input-todos" placeholder="Ingresa tu Tarea">
+            </div>
+
+            <div class="div-button">
+                <button id="buton-add-todo" class="button-todo">Crear Tarea</button>
+            </div>
+                
+        </div>
+
         
         <div class="target-todos">
             <ul class="todos">
@@ -44,5 +48,6 @@
         </div>
         
     </div>
+    <script src="main.js" defer></script>
 </body>
 </html>
