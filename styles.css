@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(48, 64, 95);
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.container{
+    background-color: #FFF;
+    max-width: 400px;
+    height: 100px;
+    border-radius: 18px;
+    margin: 150px auto;
+    padding: 30px 40px 75px;
+    box-shadow: 10px 10px 20px rgb(20, 36, 65, 0.8);
+    transition: height 0.5s;
+}
+
+.container.add{
+    height: 550px;
+}
+.btnAdd{
+    height: 550px;
+    
+}
+
+.container h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(38, 41, 75);
+    font-size: 1.9rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s;
+}
+.container h1.add{
+    transform: translateX(50px);
+    padding-bottom: 30px;
+    
+}
+
+
+.btnAdd{
+    height: 50px;
+    width: 50px;
+    margin-left: 55px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: rgb(255, 208, 0);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 3px 3px 4px rgb(20, 36, 65, 0.3);
+}
+.btnAdd.add{
+    display: none;
+}
+
+.btnAdd:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.inputs{
+    border-top: 1px solid rgb(20, 36, 65, 0.5);
+    justify-content: start;
+    padding:50px 0 0 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    max-height: 0px; /* Altura máxima para mostrar el contenido */
+    opacity: 0;
+
+}
+.inputs.add{
+    
+    max-height: 500px; /* Altura máxima para mostrar el contenido */
+    opacity: 1;
+}
+
+.inputs input{
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 0.4px solid rgb(20, 36, 65, 0.5);
+}
+
+.btnSave{
+    background-color: rgb(255, 208, 0);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    width: 70%;
+    margin-right: 25px;
+    color: #474747;
+    font-size: 1.3rem;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-bottom: 50px;
+    transition: box-shadow 0.4s;
+}
+.btnSave:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgb(20, 36, 65, 0.6);
+}
+
+.btnDelete{
+    background-color: rgb(223, 48, 48);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    width: 20%;
+    color: #FFF;
+    font-size: 1.3rem;
+    transition: box-shadow 0.4s;
+}
+.btnDelete:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgb(20, 36, 65, 0.6);
+}
