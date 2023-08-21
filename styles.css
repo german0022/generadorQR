@@ -6,6 +6,10 @@
     border: none;
 }
 
+html, body {
+    overflow: hidden;
+}
+
 body{
     background-color: rgb(38, 50, 88);
     display: flex;
