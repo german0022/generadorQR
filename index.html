@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Generador Codigo QR</title>
 </head>
 <body>
-    <div class="container" id="container">
-        <h1>Lista de Deseos <button class="btnAdd" id="btnAdd"><i class="fa-solid fa-plus"></i></button></h1>
-
-        <div class="inputs" id="inputs">
-            <input type="text" placeholder="Nombra tu deseo">
-            <input type="text" placeholder="Describe tu deseo">
-            <input type="text" placeholder="Fecha | dd/mm/aaaa">
-            <input type="text" placeholder="Presupuesto">
-
-            <button class="btnSave" id="btnSave">Guarda tu deseo</button>
-            <button class="btnDelete" id="btnDelete"><i class="fa-solid fa-trash"></i></button>
+    <div class="container">
+        <header>
+            <h1>Generador QR</h1>
+            <p>Escribe tu url o texto para crear el codigo QR</p>
+        </header>
+        <div class="form">
+            <input type="text" placeholder="Conviertelo aqui" id="input">
+            <button id="button">Generar Codigo QR</button>
         </div>
-
+        <div class="qr" id="qr">
+            <img src="img/Captura.PNG" alt="" id="img">
+        </div>
     </div>
 
-
+    
     <script src="main.js"></script>
 </body>
 </html>
