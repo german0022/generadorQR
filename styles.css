@@ -5,7 +5,6 @@
     font-family: 'Poppins', sans-serif;
     border: none;
 }
-
 html, body {
     overflow: hidden;
 }
@@ -51,7 +50,6 @@ body{
     border: 1px solid #999;
     border-radius: 10px;
     margin-bottom: 10px;
-    touch-action: manipulation;
 }
 .form button{
     padding: 20px;
@@ -86,4 +84,54 @@ body{
     height: 200px;
     width: 200px;
     cursor: pointer;
+}
+
+.toast{
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    transform: translateX(calc(100% + 30px));
+    transition: transform 0.3s ease-in-out;
+}
+.toast.active{
+    transform: translateX(0%);
+}
+.toastContent{
+    display: flex;
+    align-items: center;
+   
+}
+.toastContent .error{
+    margin-right: 20px;
+    background-color: rgb(255, 196, 0);
+    border-radius: 20%;
+    padding: 10px;
+    color: #fff;
+}
+.toastContent .close{
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute;
+    font-size: 20px;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.toastContent .close:hover{
+    background-color: #dddddd;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.text1{
+    font-size: 18px;
+    font-weight: 600;
 }
