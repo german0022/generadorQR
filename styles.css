@@ -51,6 +51,7 @@ body{
     border: 1px solid #999;
     border-radius: 10px;
     margin-bottom: 10px;
+    touch-action: manipulation;
 }
 .form button{
     padding: 20px;
