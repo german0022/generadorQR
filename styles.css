@@ -26,15 +26,14 @@ body{
     transition: height 0.3s ease;
 }
 .container.active{
-    height: 535px;
+    height: 540px;
 }
 
-.container.noactive{
-    height: 280px;
-}
+
 
 .container h1{
     margin-bottom: 10px;
+    color: #3a3a3a;
 }
 .container p{
     color: rgb(65, 65, 65);
@@ -50,6 +49,7 @@ body{
     border: 1px solid #999;
     border-radius: 10px;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 .form button{
     padding: 20px;
@@ -73,12 +73,12 @@ body{
     border-radius: 0 0 10px 10px;
     pointer-events: none;
     opacity: 0;
+    
 }
 .container.active .qr{
     opacity: 1;
     transition: opacity 0.5s 0.1s ease;
     pointer-events: auto;
-    
 }
 .qr img{
     height: 200px;
@@ -96,9 +96,11 @@ body{
     border-radius: 10px;
     width: 320px;
     transform: translateX(calc(100% + 30px));
+    opacity: 0;
     transition: transform 0.3s ease-in-out;
 }
 .toast.active{
+    opacity: 1;
     transform: translateX(0%);
 }
 .toastContent{
