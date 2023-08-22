@@ -97,7 +97,7 @@ body{
     width: 320px;
     transform: translateX(calc(100% + 30px));
     opacity: 0;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-out;
 }
 .toast.active{
     opacity: 1;
